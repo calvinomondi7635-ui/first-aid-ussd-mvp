@@ -1,0 +1,13 @@
+{
+  "name": "first-aid-ussd-mvp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A USSD health-triage prototype with a browser simulator and gateway endpoint.",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

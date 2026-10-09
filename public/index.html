@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f4ec">
+    <title>Fieldline | USSD health triage prototype</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Fieldline home"><span class="brand-mark" aria-hidden="true">+</span> Fieldline</a>
+      <span class="prototype-tag">USSD PROTOTYPE</span>
+    </header>
+
+    <main class="layout">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">REMOTE CARE · TEXT SESSION</p>
+        <h1 id="page-title">A first step<br>toward care.</h1>
+        <p class="intro-copy">A lightweight USSD flow for describing a health concern and spotting signs that need urgent help.</p>
+        <div class="safety-note"><span aria-hidden="true">!</span><p><strong>Not for emergencies.</strong> If someone is in immediate danger, contact local emergency services or go to the nearest health facility now.</p></div>
+        <p class="prototype-note">Prototype only. The triage flow is not clinically validated and must be reviewed by local health professionals before use.</p>
+      </section>
+
+      <section class="demo" aria-labelledby="simulator-title">
+        <div class="demo-heading">
+          <div><p class="eyebrow">LIVE FLOW SIMULATOR</p><h2 id="simulator-title">Try a session</h2></div>
+          <span class="network-status"><span></span> LOCAL DEMO</span>
+        </div>
+        <div class="phone" aria-label="USSD session simulator">
+          <div class="phone-speaker" aria-hidden="true"></div>
+          <div class="phone-screen">
+            <div class="phone-status"><span>USSD</span><span>● ● ●</span></div>
+            <div id="messages" class="messages" aria-live="polite" aria-relevant="additions text"></div>
+            <form id="reply-form" class="reply-form" hidden>
+              <label for="reply-input">Your reply</label>
+              <div class="reply-controls"><input id="reply-input" inputmode="numeric" autocomplete="off" aria-describedby="reply-hint"><button type="submit" aria-label="Send reply">Send</button></div>
+              <p id="reply-hint">Enter a menu number, then press Send.</p>
+            </form>
+            <button id="start-button" class="start-button" type="button">Start session <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+        <button id="restart-button" class="restart-button" type="button" hidden>Restart session</button>
+        <p class="demo-caption">This simulator sends the same request format as the USSD endpoint.</p>
+      </section>
+    </main>
+
+    <footer class="footer"><span>FIELDLINE / HEALTH ACCESS</span><span>Prototype · No personal data stored</span></footer>
+  </body>
+</html>
